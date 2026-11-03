@@ -26,8 +26,9 @@ dist-ssr
 # Temporary zip files
 *.zip
 
-# Ignore all markdown files (Strict project rule: never push .md to remote repo)
+# Ignore all markdown files except README.md for repo presentation
 *.md
+!README.md
 
 # Environment (Never push .env or credentials to remote repo)
 .env
