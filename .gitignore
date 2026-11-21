@@ -7,32 +7,53 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
 dist
 dist-ssr
 *.local
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+.vscode/
+*.code-workspace
+.idea/
 .DS_Store
+Thumbs.db
+desktop.ini
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# Temporary zip files
+# Temporary and compressed archives
 *.zip
+*.tar.gz
+*.rar
+cpanel_public_html.zip
+
+# Certificates, Keys, Databases & Secrets
+deploy_secrets.local
+*.sql
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+
+# Sensitive local TSX components (local authentication & credentials)
+src/pages/admin/components/LoginForm.tsx
 
 # Ignore all markdown files except README.md for repo presentation
 *.md
 !README.md
+CONTEXTO_TECNICO.md
+contexto.md
+contexto*.md
+implementation_plan*.md
 
-# Environment (Never push .env or credentials to remote repo)
+# Environment variables (strict security: never push real env)
 .env
 .env.*
-.env.local
-.env.*.local
-
+.env*.local
+!.env.example
